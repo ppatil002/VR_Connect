@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.nihar.teamvelociracers.ContactUs">
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Enter Complaint"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="13dp"
+        android:layout_toStartOf="@+id/visit_website"
+        android:backgroundTint="#000000"
+        android:text="Send Message"
+        android:textColor="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/button1"
+        android:layout_marginTop="41dp"
+        android:background="@android:drawable/stat_sys_phone_call"
+        android:backgroundTint="#ff6616" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView14"
+        android:layout_marginTop="41dp"
+        android:background="@android:drawable/stat_sys_phone_call"
+        android:backgroundTint="#ff6616" />
+
+    <Button
+        android:id="@+id/visit_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#000000"
+        android:text="Visit Website"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button2"
+        android:layout_marginStart="44dp"
+        android:text="24-Hours Service"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignStart="@+id/textView12"
+        android:text="84211  40135"
+        android:textColor="#ff6616"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView14"
+        android:layout_alignTop="@+id/button1"
+        android:text="24-Hours Service"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignStart="@+id/textView15"
+        android:text="88062  95466"
+        android:textColor="#ff6616"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
