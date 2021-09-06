@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_speed"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_speed" />
+        <item
+            android:id="@+id/nav_music"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_music" />
+        <item
+            android:id="@+id/nav_GPS"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_gps" />
+        <item
+            android:id="@+id/nav_battery"
+            android:icon="@drawable/ic_baseline_battery_charging_full_24"
+            android:title="@string/menu_battery" />
+        <item
+            android:id="@+id/nav_reverse_parking"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_reverse_parking" />
+        <item
+            android:id="@+id/nav_trip_summary"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_trip_Summary" />
+        <item
+            android:id="@+id/nav_emergency_contact"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_emergency_contact" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_about" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_help" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>
