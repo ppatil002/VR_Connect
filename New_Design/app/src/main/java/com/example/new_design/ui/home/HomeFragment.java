@@ -1,4 +1,4 @@
-package com.example.navigation_bar.ui.home;
+package com.example.new_design.ui.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.navigation_bar.R;
-import com.example.navigation_bar.databinding.FragmentHomeBinding;
+import com.example.new_design.R;
+import com.example.new_design.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
@@ -28,13 +28,13 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-//        final TextView textView = binding.textView3;
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
+        final TextView textView = binding.textHome;
+        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                textView.setText(s);
+            }
+        });
         return root;
     }
 
