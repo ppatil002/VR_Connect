@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:ignore="ExtraText">
+    tools:context=".CurrentWeather">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/isometricfial"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeZone"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityName"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/timeZone"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sunRise"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/cityName"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sunSet"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/sunRise"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperature"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/sunSet"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/precipitation"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/temperature"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AQI"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/precipitation"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/visibility"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/AQI"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/visibility"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/observedTime"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="244dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        android:textAlignment="center"
+        android:textColor="#ff6616">
+    </TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
