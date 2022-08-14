@@ -1,17 +1,11 @@
 package com.example.nihar.teamvelociracers;
 
-/**
- * Created by nihar on 19/9/18.
- */
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * Created by nihar on 17/9/18.
- */
 
 public class Tab1 extends Fragment {
     @Override

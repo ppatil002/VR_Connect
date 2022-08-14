@@ -1,149 +1,352 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:ignore="ExtraText">
     tools:context=".CurrentWeather">
 
-
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="172dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/isometricfial"
-        tools:ignore="MissingConstraints" />
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/isometricfial"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textColor="#ff6616"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toStartOf="@+id/degreeSymbol"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/degreeSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="O"
+            android:textColor="#ff6616"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/celciusSymbol"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/celciusSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginEnd="7dp"
+            android:gravity="center"
+            android:text="C"
+            android:textColor="#ff6616"
+            android:textSize="40sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="193dp"
+            android:layout_marginBottom="4dp"
+            android:foregroundGravity="center"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:text="Current City:"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                >
+
+            </TextView>
+
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cityName"
+            android:visibility="visible"
+            android:textSize="20sp"
+            android:textAlignment="textStart"
+            android:textColor="#ff6616">
+            </TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:text="TimeZone:"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                >
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeZone"
+                android:visibility="visible"
+                android:textSize="20sp"
+                android:textAlignment="textStart"
+                android:textColor="#ff6616">
+            </TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:text="Sunrise Time:"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                >
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sunRise"
+                android:visibility="visible"
+                android:textSize="20sp"
+                android:textAlignment="textStart"
+                android:textColor="#ff6616">
+            </TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:text="Sunset Time:"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                >
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sunSet"
+                android:visibility="visible"
+                android:textSize="20sp"
+                android:textAlignment="textStart"
+                android:textColor="#ff6616">
+            </TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:text="Solar Radiation:"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                >
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/solar_rad"
+                android:visibility="visible"
+                android:textSize="20sp"
+                android:textAlignment="textStart"
+                android:textColor="#ff6616">
+            </TextView>
+        </LinearLayout>
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/timeZone"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/imageView2"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="7dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:text="Precipitation:"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/precipitation"
+            android:visibility="visible"
+            android:textSize="20sp"
+            android:textAlignment="textStart"
+            android:textColor="#ff6616">
+        </TextView>
+    </LinearLayout>
 
 
-    <TextView
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:text="Visibility:"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                >
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/visibility"
+                android:visibility="visible"
+                android:textSize="20sp"
+                android:textAlignment="textStart"
+                android:textColor="#ff6616">
+            </TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:text="Air Quality Index :"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                >
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/AQI"
+                android:visibility="visible"
+                android:layout_marginTop="11dp"
+                android:textSize="20sp"
+                android:textAlignment="textStart"
+                android:textColor="#ff6616">
+            </TextView>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/description"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="#ff6616"
+            >
+        </TextView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/cityName"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/timeZone"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sunRise"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/cityName"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
+        <TextView
+            android:id="@+id/observedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff6616"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sunSet"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/sunRise"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/temperature"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/sunSet"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/precipitation"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/temperature"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/AQI"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/precipitation"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/visibility"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/AQI"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/description"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/visibility"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/observedTime"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="244dp"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/description"
-        android:textAlignment="center"
-        android:textColor="#ff6616">
-    </TextView>
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

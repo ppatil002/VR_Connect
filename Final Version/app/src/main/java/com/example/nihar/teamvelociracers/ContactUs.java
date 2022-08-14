@@ -4,7 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import androidx.annotation.Nullable;
+
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 public class ContactUs extends AppCompatActivity {
-    private Button button , button2 ,button1 ,  visit_website;
+    private Button messageButton, callButton1,callButton2 ,  visit_website;
     private EditText editText1;
     private static final int REQUEST_CALL =1;
     @Override
@@ -33,35 +34,36 @@ public class ContactUs extends AppCompatActivity {
         }else {
 
         }
-        button = (Button)findViewById(R.id.button);
-        button2 = (Button)findViewById(R.id.button2);
+        messageButton = (Button)findViewById(R.id.messageButton);
         editText1 = (EditText)findViewById(R.id.editText2);
-        button.setOnClickListener(new View.OnClickListener() {
+        messageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String number = "8421140135";
+                String number = "8452991487";
                 String sms = editText1.getText().toString();
                 try{
                     SmsManager smsManager = SmsManager.getDefault();
                     smsManager.sendTextMessage(number, null, sms, null, null);
-                    Toast.makeText(ContactUs.this, "Sent", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ContactUs.this, "Message Send to Helpline", Toast.LENGTH_SHORT).show();
+                    editText1.setText("", null);
                 }catch (Exception e) {
                     Toast.makeText(ContactUs.this , "Failed" , Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
-        button1 = (Button)findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makePhoneCall1();
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener() {
+        callButton1 = (Button)findViewById(R.id.callButton1);
+        callButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 makePhoneCall();
+            }
+        });
+
+        callButton2 = (Button)findViewById(R.id.callButton2);
+        callButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                makePhoneCall1();
             }
         });
 
@@ -77,7 +79,7 @@ public class ContactUs extends AppCompatActivity {
     }
 
     private void makePhoneCall() {
-        String number = "8421140135";
+        String number = "8452991487";
         if(ContextCompat.checkSelfPermission(ContactUs.this, Manifest.permission.CALL_PHONE)!=PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(ContactUs.this , new String[] {Manifest.permission.CALL_PHONE} , 2);
         }else{
@@ -87,7 +89,7 @@ public class ContactUs extends AppCompatActivity {
         }
     }
     private void makePhoneCall1() {
-        String number = "8806295466";
+        String number = "9967657839";
         if(ContextCompat.checkSelfPermission(ContactUs.this, Manifest.permission.CALL_PHONE)!=PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(ContactUs.this , new String[] {Manifest.permission.CALL_PHONE} , 3);
         }else{

@@ -1,49 +1,55 @@
 package com.example.nihar.teamvelociracers;
 
-import androidx.fragment.app.FragmentActivity;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.widget.Toast;
 
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentActivity;
+
+import com.example.nihar.teamvelociracers.databinding.ActivityDealerLocationsBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class DealerLocator extends FragmentActivity implements OnMapReadyCallback {
+public class DealerLocations extends FragmentActivity implements OnMapReadyCallback {
     private static final LatLng Wakad = new LatLng(18.609320,73.769690);
     private static final LatLng Hadapsar = new LatLng(18.507070,73.959360);
     private static final LatLng ShivajiNagar = new LatLng(18.535960,73.833470);
     private static final LatLng Nigdi = new LatLng(18.647630,73.767600);
-    private static final LatLng Baner = new LatLng(18.562120,73.802540);
+    private static final LatLng Kothrud = new LatLng(18.5074,73.8077);
     private static final LatLng Aundh = new LatLng(18.565130,73.805490);
     private static final LatLng VimanNagar = new LatLng(18.572390,73.906550);
 
 
     private Marker mVimanNagar;
     private Marker mAundh;
-    private Marker mBaner;
+    private Marker mKothrud;
     private Marker mNigdi;
     private Marker mHadapsar;
     private Marker mShivajiNagar;
     private Marker mWakad;
 
     private GoogleMap mMap;
+    private ActivityDealerLocationsBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_dealer_locator);
-//        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-//                .findFragmentById(R.id.map);
-//        mapFragment.getMapAsync(this);
-        Toast.makeText(this, "Use Google API to show Locations", Toast.LENGTH_SHORT).show();
 
+        binding = ActivityDealerLocationsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
-
 
     /**
      * Manipulates the map once available.
@@ -54,18 +60,15 @@ public class DealerLocator extends FragmentActivity implements OnMapReadyCallbac
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
         mMap = googleMap;
 
 
-        // Add some markers to the map, and add a data object to each marker.
-
-
         mHadapsar = mMap.addMarker((new MarkerOptions()
-        .position(Hadapsar)
-        .title("Hadapsar")));
+                .position(Hadapsar)
+                .title("Hadapsar")));
         mHadapsar.setTag(0);
 
         mShivajiNagar = mMap.addMarker((new MarkerOptions()
@@ -74,28 +77,28 @@ public class DealerLocator extends FragmentActivity implements OnMapReadyCallbac
         mShivajiNagar.setTag(0);
 
         mWakad = mMap.addMarker((new MarkerOptions()
-        .position(Wakad)
-        .title("Wakad")));
+                .position(Wakad)
+                .title("Wakad")));
         mWakad.setTag(0);
 
         mNigdi = mMap.addMarker(new MarkerOptions()
-        .position(Nigdi)
-        .title("Nigdi"));
+                .position(Nigdi)
+                .title("Nigdi"));
         mNigdi.setTag(0);
 
-        mBaner = mMap.addMarker(new MarkerOptions()
-        .position(Baner)
-        .title("Baner"));
-        mBaner.setTag(0);
+        mKothrud = mMap.addMarker(new MarkerOptions()
+                .position(Kothrud)
+                .title("Kothrud"));
+        mKothrud.setTag(0);
 
         mAundh = mMap.addMarker(new MarkerOptions()
-        .position(Aundh)
-        .title("Aundh"));
+                .position(Aundh)
+                .title("Aundh"));
         mAundh.setTag(0);
 
         mVimanNagar = mMap.addMarker(new MarkerOptions()
-        .position(VimanNagar)
-        .title("Viman Nagar"));
+                .position(VimanNagar)
+                .title("Viman Nagar"));
         mVimanNagar.setTag(0);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ShivajiNagar , 11));
@@ -104,7 +107,4 @@ public class DealerLocator extends FragmentActivity implements OnMapReadyCallbac
 
 
     }
-
-
-
 }

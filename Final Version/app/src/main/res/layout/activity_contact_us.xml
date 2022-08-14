@@ -13,18 +13,19 @@
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
         android:ems="10"
         android:hint="Enter Complaint"
+        android:textAlignment="center"
+        android:textColorHint="#FF803D"
         android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:singleLine="false"
         android:textColor="#ffffff" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/messageButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText2"
@@ -35,22 +36,21 @@
         android:textColor="@color/colorAccent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/callButton1"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/callButton2"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/button1"
         android:layout_marginTop="41dp"
         android:background="@android:drawable/stat_sys_phone_call"
         android:backgroundTint="#ff6616" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/callButton2"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
-
-        android:layout_alignParentEnd="true"
         android:layout_below="@+id/textView14"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="41dp"
         android:background="@android:drawable/stat_sys_phone_call"
         android:backgroundTint="#ff6616" />
@@ -59,7 +59,7 @@
         android:id="@+id/visit_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/button1"
+        android:layout_alignEnd="@+id/callButton2"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="14dp"
         android:backgroundTint="#000000"
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/button2"
+        android:layout_alignTop="@+id/callButton1"
         android:layout_marginStart="44dp"
         android:text="24-Hours Service"
         android:textColor="#ffffff"
@@ -82,9 +82,9 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button2"
         android:layout_alignStart="@+id/textView12"
-        android:text="84211  40135"
+        android:layout_alignBottom="@+id/callButton1"
+        android:text="84529 91487"
         android:textColor="#ff6616"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -94,7 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView14"
-        android:layout_alignTop="@+id/button1"
+        android:layout_alignTop="@+id/callButton2"
         android:text="24-Hours Service"
         android:textColor="#ffffff"
         android:textSize="16sp"
@@ -104,9 +104,9 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button1"
         android:layout_alignStart="@+id/textView15"
-        android:text="88062  95466"
+        android:layout_alignBottom="@+id/callButton2"
+        android:text="99676 57839"
         android:textColor="#ff6616"
         android:textSize="16sp"
         android:textStyle="bold" />

@@ -28,4 +28,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_dealer_locations">DealerLocations</string>
+
+<!--    Strings Related to API-->
+    <string name="googleAPIkey">AIzaSyCGY3g_nhJhVLNm_ZMiCQQ59PNuhiinZj8</string>
 </resources>
