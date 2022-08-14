@@ -1,4 +1,4 @@
-package com.example.nihar.teamvelociracers;
+package com.example.vrconnect.teamvelociracers;
 
 import android.content.Context;
 import android.net.Uri;

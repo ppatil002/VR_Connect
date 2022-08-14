@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nihar.teamvelociracers">
+    package="com.example.vrconnect.teamvelociracers">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -41,14 +41,14 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".DealerLocations"
+            android:name="com.example.vrconnect.teamvelociracers.DealerLocations"
             android:exported="false"
             android:label="@string/title_activity_dealer_locations" />
         <activity
-            android:name=".CurrentWeather"
+            android:name="com.example.vrconnect.teamvelociracers.CurrentWeather"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.vrconnect.teamvelociracers.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
@@ -58,16 +58,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutUs" />
+        <activity android:name="com.example.vrconnect.teamvelociracers.AboutUs" />
         <activity
-            android:name=".ServiceCenter"
+            android:name="com.example.vrconnect.teamvelociracers.ServiceCenter"
             android:label="@string/title_activity_service_center" />
         <activity
-            android:name=".Knowledge_center"
+            android:name="com.example.vrconnect.teamvelociracers.Knowledge_center"
             android:label="@string/title_activity_knowledge_center"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ContactUs" />
-        <activity android:name=".PDF" />
+        <activity android:name="com.example.vrconnect.teamvelociracers.ContactUs" />
+        <activity android:name="com.example.vrconnect.teamvelociracers.PDF" />
     </application>
 
 </manifest>

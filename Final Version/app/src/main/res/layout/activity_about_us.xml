@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nihar.teamvelociracers.AboutUs"
+    tools:context="com.example.vrconnect.teamvelociracers.AboutUs"
     android:background="#000000">
 
     <TextView

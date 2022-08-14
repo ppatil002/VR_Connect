@@ -1,4 +1,4 @@
-package com.example.nihar.teamvelociracers;
+package com.example.vrconnect.teamvelociracers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,7 +46,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.DateFormat;
 import java.text.DecimalFormat;;
 
 

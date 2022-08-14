@@ -1,4 +1,4 @@
-package com.example.nihar.teamvelociracers;
+package com.example.vrconnect.teamvelociracers;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -19,8 +19,8 @@ public class ExampleInstrumentedTest {
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getTargetContext();
-
-        assertEquals("com.example.nihar.teamvelociracers", appContext.getPackageName());
+//        Context appContext = InstrumentationRegistry.getTargetContext();
+        Context appContext=InstrumentationRegistry.getInstrumentation().getTargetContext();
+        assertEquals("com.example.vrconnect.teamvelociracers", appContext.getPackageName());
     }
 }

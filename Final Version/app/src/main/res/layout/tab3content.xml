@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context="com.example.nihar.teamvelociracers.Knowledge_center$PlaceholderFragment">
+    tools:context="com.example.vrconnect.teamvelociracers.Knowledge_center$PlaceholderFragment">
 
 
 

@@ -4,7 +4,7 @@ apply plugin: 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 android {
     compileSdk 32
     defaultConfig {
-        applicationId "com.example.nihar.teamvelociracers"
+        applicationId "com.example.vrconnect.teamvelociracers"
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 1

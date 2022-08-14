@@ -1,4 +1,4 @@
-package com.example.nihar.teamvelociracers;
+package com.example.vrconnect.teamvelociracers;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
